@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الأذكار</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="widget">
+        <div class="header" id="dragHandle">
+            <button class="btn-close" id="closeBtn">×</button>
+            <button class="btn-tab active" data-category="morning">صباح</button>
+            <button class="btn-tab" data-category="evening">مساء</button>
+            <button class="btn-icon" id="settingsBtn">
+                <i data-feather="settings"></i>
+            </button>
+        </div>
+        
+        <div class="content">
+            <div class="text-wrapper">
+                <p class="text" id="athkarText">...</p>
+                <button class="btn-info" id="infoBtn">
+                    <i data-feather="info"></i>
+                </button>
+                <div class="info-tooltip" id="infoTooltip"></div>
+            </div>
+            
+            <div class="counter">
+                <span id="currentCount">0</span>/<span id="totalCount">0</span>
+            </div>
+            
+            <button class="btn-count" id="countBtn">تسبيح</button>
+            
+            <div class="nav">
+                <button class="btn-nav" id="nextBtn">‹</button>
+                <div class="progress">
+                    <span id="athkarProgress">0</span>/<span id="athkarTotal">0</span>
+                </div>
+                <button class="btn-nav" id="prevBtn">›</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+    <script src="renderer.js"></script>
+</body>
+</html>
