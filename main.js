@@ -51,7 +51,7 @@ function createWindow() {
     transparent: false,
     alwaysOnTop: false,
     resizable: false,
-    skipTaskbar: true,
+    skipTaskbar: false,
     backgroundColor: bgColor,
     webPreferences: {
       nodeIntegration: true,
