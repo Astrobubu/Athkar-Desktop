@@ -46,7 +46,7 @@ function createWindow() {
 
   const options = {
     width: 320,
-    height: 480,
+    height: 720,
     frame: false,
     transparent: false,
     alwaysOnTop: false,
