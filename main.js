@@ -49,7 +49,7 @@ function createWindow() {
     height: 480,
     frame: false,
     transparent: false,
-    alwaysOnTop: true,
+    alwaysOnTop: false,
     resizable: false,
     skipTaskbar: true,
     backgroundColor: bgColor,
