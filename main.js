@@ -53,6 +53,7 @@ function createWindow() {
     resizable: false,
     skipTaskbar: false,
     backgroundColor: bgColor,
+    focusable: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
@@ -68,6 +69,9 @@ function createWindow() {
 
   mainWindow.loadFile('index.html');
   mainWindow.setIgnoreMouseEvents(false);
+
+  // Ensure window can lose focus and go behind other windows
+  mainWindow.setAlwaysOnTop(false);
 
   // Save position when window is moved
   mainWindow.on('moved', () => {
@@ -131,7 +135,6 @@ function createTray() {
       click: () => {
         if (mainWindow) {
           mainWindow.show();
-          mainWindow.focus();
         }
       }
     },
@@ -169,7 +172,6 @@ function createTray() {
         mainWindow.hide();
       } else {
         mainWindow.show();
-        mainWindow.focus();
       }
     }
   });
