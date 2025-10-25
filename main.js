@@ -54,6 +54,7 @@ function createWindow() {
     skipTaskbar: false,
     backgroundColor: bgColor,
     focusable: true,
+    icon: path.join(__dirname, 'build', 'icon.png'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
