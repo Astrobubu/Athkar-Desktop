@@ -2,6 +2,11 @@ const { app, BrowserWindow, ipcMain, Tray, Menu, nativeImage } = require('electr
 const path = require('path');
 const fs = require('fs');
 
+// Set app user model ID for Windows taskbar
+if (process.platform === 'win32') {
+  app.setAppUserModelId('com.athkar.desktop');
+}
+
 let mainWindow;
 let settingsWindow;
 let tray = null;
@@ -40,7 +45,7 @@ function saveWindowPosition() {
 
 function createWindow() {
   const savedPosition = loadWindowPosition();
-  
+
   const savedSettings = loadSavedSettings();
   const bgColor = savedSettings && savedSettings.darkMode ? '#0d0d0d' : '#F5F3EF';
 
@@ -54,7 +59,6 @@ function createWindow() {
     skipTaskbar: false,
     backgroundColor: bgColor,
     focusable: true,
-    icon: path.join(__dirname, 'build', 'icon.png'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
@@ -124,11 +128,9 @@ function loadSavedSettings() {
 }
 
 function createTray() {
-  // Create tray icon from base64 PNG (simple teal icon matching app theme)
-  const iconData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2ElEQVR4nO2WQQ6DMAxE38lVOApH4SgchaNwFY7SQ1RVUKhju3ZaJP9LkZDsfGw7hgEAAAAA/oyZWTPzlZkfzHxn5ouZWY/MAjNfmXlS46nynZm5RgTgqQBP9b6r/BgRgEcBeFTPUb1HROB0AI5qjhKBUwE4qnOUCJwGwKjmKBU4BYCjmqNU4N8BRJXRVLvBc2O/CIBRRR9/N7DqmiAC0FzGqWuiCEBTGauuySIAzWSsuqaIADSRseqaKgLgl9Ht+1PWVBGA6jJWXXsQAaguY9W1FxGAn8o41fsuAAAAAOwTL+zHMoVj6c9VAAAAAElFTkSuQmCC';
-  const icon = nativeImage.createFromDataURL(iconData);
-
-  tray = new Tray(icon);
+  // Use the app icon for the tray
+  const iconPath = path.join(__dirname, 'logo.ico');
+  tray = new Tray(iconPath);
   
   const contextMenu = Menu.buildFromTemplate([
     {
