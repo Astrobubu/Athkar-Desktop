@@ -11,7 +11,7 @@ let state = {
     currentAthkarIndex: 0,
     currentCount: 0,
     settings: {
-        fontSize: 18,
+        fontSize: 22,
         playSound: true,
         darkMode: false
     }

@@ -1,6 +1,6 @@
 {
   "name": "athkar-desktop",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "أذكار المسلم - Beautiful Islamic Athkar Desktop Widget",
   "main": "main.js",
   "scripts": {
