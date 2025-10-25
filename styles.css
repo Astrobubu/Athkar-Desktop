@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #e8e8e8;
+    background: #F5F3EF;
     overflow: hidden;
     user-select: none;
 }
@@ -26,7 +26,7 @@ body.dark .header {
 }
 
 body.dark .btn-tab.active {
-    background: #2d2d2d;
+    background: #2D5F5D;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -39,7 +39,7 @@ body.dark .btn-tab {
 }
 
 body.dark .btn-tab:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(45, 95, 93, 0.3);
 }
 
 body.dark .btn-close {
@@ -74,9 +74,9 @@ body.dark .progress {
 .widget {
     width: 320px;
     height: 100vh;
-    background: #fafafa;
+    background: #FEFDFB;
     border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(45, 95, 93, 0.15);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -87,8 +87,8 @@ body.dark .progress {
     align-items: center;
     gap: 4px;
     padding: 8px;
-    background: #f0f0f0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: #F5F3EF;
+    border-bottom: 1px solid rgba(45, 95, 93, 0.1);
 }
 
 .btn-tab {
@@ -104,15 +104,17 @@ body.dark .progress {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #2D5F5D;
 }
 
 .btn-tab:hover {
-    background: rgba(0, 0, 0, 0.08);
+    background: rgba(45, 95, 93, 0.08);
 }
 
 .btn-tab.active {
-    background: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    background: #2D5F5D;
+    color: #FEFDFB;
+    box-shadow: 0 2px 4px rgba(45, 95, 93, 0.3);
 }
 
 .btn-icon,
@@ -126,7 +128,7 @@ body.dark .progress {
     background: transparent;
     border-radius: 6px;
     cursor: pointer;
-    color: #666;
+    color: #2D5F5D;
     transition: all 0.2s;
     display: flex;
     align-items: center;
@@ -136,6 +138,7 @@ body.dark .progress {
 .btn-icon svg {
     width: 16px;
     height: 16px;
+    stroke: #2D5F5D;
 }
 
 .btn-close {
@@ -143,11 +146,11 @@ body.dark .progress {
 }
 
 .btn-icon:hover {
-    background: rgba(0, 0, 0, 0.08);
+    background: rgba(45, 95, 93, 0.08);
 }
 
 .btn-close:hover {
-    background: #ff5252;
+    background: #C74B50;
     color: #fff;
 }
 
@@ -174,12 +177,13 @@ body.dark .progress {
     line-height: 1.8;
     text-align: center;
     padding: 12px;
-    background: #f0f0f0;
+    background: #F5F3EF;
     border-radius: 8px;
     overflow-y: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #2D5F5D;
 }
 
 .btn-info {
@@ -197,7 +201,7 @@ body.dark .progress {
     display: none;
     align-items: center;
     justify-content: center;
-    color: #666;
+    color: #2D5F5D;
 }
 
 .btn-info svg {
@@ -210,7 +214,7 @@ body.dark .progress {
 }
 
 .btn-info:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(45, 95, 93, 0.08);
 }
 
 body.dark .btn-info {
@@ -225,8 +229,8 @@ body.dark .btn-info:hover {
     position: absolute;
     top: 32px;
     left: 4px;
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
+    background: #2D5F5D;
+    color: #FEFDFB;
     padding: 10px 14px;
     border-radius: 6px;
     font-size: 15px;
@@ -234,7 +238,7 @@ body.dark .btn-info:hover {
     max-width: 280px;
     z-index: 1000;
     display: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(45, 95, 93, 0.4);
 }
 
 .info-tooltip.visible {
@@ -251,18 +255,18 @@ body.dark .info-tooltip {
 }
 
 .text::-webkit-scrollbar-track {
-    background: #d0d0d0;
+    background: #E8E6E1;
     border-radius: 10px;
 }
 
 .text::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #2D5F5D;
     border-radius: 10px;
-    border: 2px solid #f0f0f0;
+    border: 2px solid #F5F3EF;
 }
 
 .text::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #1E4544;
 }
 
 body.dark .text::-webkit-scrollbar-track {
@@ -282,7 +286,7 @@ body.dark .text::-webkit-scrollbar-thumb:hover {
     font-size: 32px;
     font-weight: 700;
     text-align: center;
-    color: #333;
+    color: #2D5F5D;
     padding: 8px 0;
 }
 
@@ -291,8 +295,8 @@ body.dark .text::-webkit-scrollbar-thumb:hover {
     font-size: 18px;
     font-weight: 600;
     border: none;
-    background: #2196f3;
-    color: #fff;
+    background: #2D5F5D;
+    color: #FEFDFB;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s;
@@ -305,9 +309,9 @@ body.dark .text::-webkit-scrollbar-thumb:hover {
 }
 
 .btn-count:hover {
-    background: #1976d2;
+    background: #1E4544;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+    box-shadow: 0 4px 12px rgba(45, 95, 93, 0.4);
 }
 
 .btn-count:active {
@@ -315,7 +319,7 @@ body.dark .text::-webkit-scrollbar-thumb:hover {
 }
 
 .btn-count.completed {
-    background: #4caf50;
+    background: #5A8F7B;
 }
 
 .nav {
@@ -329,25 +333,25 @@ body.dark .text::-webkit-scrollbar-thumb:hover {
     height: 40px;
     font-size: 26px;
     line-height: 1;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    background: #ffffff;
+    border: 1px solid rgba(45, 95, 93, 0.2);
+    background: #FEFDFB;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s;
-    color: #333;
+    color: #2D5F5D;
 }
 
 .btn-nav:hover {
-    background: #f0f0f0;
-    border-color: rgba(0, 0, 0, 0.2);
+    background: #F5F3EF;
+    border-color: rgba(45, 95, 93, 0.3);
 }
 
 .progress {
     flex: 1;
     text-align: center;
     font-size: 14px;
-    color: #555;
+    color: #2D5F5D;
     padding: 10px;
-    background: #f0f0f0;
+    background: #F5F3EF;
     border-radius: 6px;
 }

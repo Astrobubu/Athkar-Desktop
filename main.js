@@ -42,7 +42,7 @@ function createWindow() {
   const savedPosition = loadWindowPosition();
   
   const savedSettings = loadSavedSettings();
-  const bgColor = savedSettings && savedSettings.darkMode ? '#0d0d0d' : '#e8e8e8';
+  const bgColor = savedSettings && savedSettings.darkMode ? '#0d0d0d' : '#F5F3EF';
 
   const options = {
     width: 320,
@@ -123,10 +123,10 @@ function loadSavedSettings() {
 }
 
 function createTray() {
-  // Create tray icon from base64 PNG (moon and star icon)
-  const iconData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAADGUlEQVR4nO2WS2hTURCGv3ObprYN1lqtWkVEEBQVXYiI4kZEd4ILN4IbRXDhxo0rV+5cuHLhQlwILkRQFBQRFAQfqIiK+KgW0VrTR5I2TZP7cKEmNW3Se9MkBf/VzJyZ8585M2fmBv5z/Q+gnVgMWAp0A0uAVqABqJbfn4FPwDPgLjAAtAC1KepXA6uAHcA+oBdYVUCuBmgD+oEjwE7gMvAWmAJieTSqGfgC3AB6iiRPdtQCB4F7wBwQA14Ae4FmA81q4DTwGAjn6B8COoAaE4KtwD3gE9APbMs1VoRaZeEuYDvwArhdgO9i3gSsN3FhMNGuO4Uxm2QKHAK2GnC2qnLeCVwA2nP4W+XrPq5oAyiKZh+wW7tvpzXJv1dLdhfQl6PerXPWGGiYfEQ09Sx3YQKol5mnB4pQl+zMCeCuBv0OmDYgqM8SXAqMahT6gFOSM4Cz0hmQ3BbgjixmxQNZYDn4pxKmLBVXrXgEOCqfJ3LOeUnyBzXvLMlcVRpcSjHxBjiYxXkYuJbibJJ82kRjqiGxCvgqg0fF0Qy8kmyH5u2WTJB0Oo1IV9F0TsBdWUgOdKTp+8Dv2tgPDAKNks+aaqQbP6BLg+0RB+P8vuljGnwFrM/RPlHQXG+qsUzG/siA74RiG5aMdnoknMvCd0o8QZN0AKCSfC0B3jvtSSB0pGhrylH/s9wbsHgAoIJ8DQJvtMUH0xGn7DcKl5yvKXCLmxYPAFSSrxXA27QEyRe/AWbkXyV522qqkW78gC4N9kXGhnKQ75Qvng1fs3Xgvy3mgIca7LU06JRMYLOhRiYd0+D+yFiz9ILmiE0cWq/ZN/PJWPYA4u5awx2xSYN2a+NJc8aAJxq8v8CAzsn/IeCxiUayD3C+pR2rkl/wlh6oA9o1Z79WtYXU71xwVhe5dDolW3DQE+3+CzU75PcUc+/+Ysv5PloD3PilYt4BP1TNdC9pSm/gKnDK5E1Y5P0t51B96vwOYLtkE/9wrgA/lCJ9f+vN9h/rfwCbHgnZJqV3VAAAAABJRU5ErkJggg==';
+  // Create tray icon from base64 PNG (simple teal icon matching app theme)
+  const iconData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2ElEQVR4nO2WQQ6DMAxE38lVOApH4SgchaNwFY7SQ1RVUKhju3ZaJP9LkZDsfGw7hgEAAAAA/oyZWTPzlZkfzHxn5ouZWY/MAjNfmXlS46nynZm5RgTgqQBP9b6r/BgRgEcBeFTPUb1HROB0AI5qjhKBUwE4qnOUCJwGwKjmKBU4BYCjmqNU4N8BRJXRVLvBc2O/CIBRRR9/N7DqmiAC0FzGqWuiCEBTGauuySIAzWSsuqaIADSRseqaKgLgl9Ht+1PWVBGA6jJWXXsQAaguY9W1FxGAn8o41fsuAAAAAOwTL+zHMoVj6c9VAAAAAElFTkSuQmCC';
   const icon = nativeImage.createFromDataURL(iconData);
-  
+
   tray = new Tray(icon);
   
   const contextMenu = Menu.buildFromTemplate([

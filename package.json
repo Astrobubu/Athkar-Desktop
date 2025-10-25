@@ -1,6 +1,6 @@
 {
   "name": "athkar-desktop",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "أذكار المسلم - Beautiful Islamic Athkar Desktop Widget",
   "main": "main.js",
   "scripts": {
@@ -37,6 +37,7 @@
       "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
     ],
     "win": {
+      "icon": "build/icon.png",
       "target": [
         {
           "target": "nsis",
