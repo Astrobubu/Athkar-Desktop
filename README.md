@@ -10,7 +10,9 @@
 
 <div align="center">
 
-[![تنزيل التطبيق](download-button.png)](../../releases/latest)
+<a href="../../releases/latest">
+  <img src="download-button.png" alt="تنزيل التطبيق" style="max-width: 40%;">
+</a>
 
 </div>
 
