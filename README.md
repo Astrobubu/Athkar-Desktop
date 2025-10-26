@@ -10,8 +10,9 @@
 
 <div align="center">
 
-[![تحميل التطبيق](https://img.shields.io/badge/تحميل_التطبيق-4CAF50?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
-[![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
+[![Download](https://img.shields.io/badge/Download-تحميل-4CAF50?style=for-the-badge&logo=download&logoColor=white)](../../releases/latest)
+[![Windows](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/Astrobubu/Athkar-Desktop?style=for-the-badge&label=Version&color=blue)](../../releases/latest)
 
 </div>
 
