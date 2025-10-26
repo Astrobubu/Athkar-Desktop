@@ -1,260 +1,178 @@
-# 🌙 أذكار المسلم - Athkar Desktop
+<div dir="rtl" align="right">
 
-<div dir="rtl" align="center">
+![بانر أذكار المسلم](banner.png)
 
-**برنامج سطح مكتب جميل وبسيط لأذكار الصباح والمساء**
+# 🌙 أذكار المسلم
 
-[![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/yourusername/athkar-desktop/releases)
-[![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)](https://www.electronjs.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+**تطبيق سطح مكتب للمحافظة على أذكار الصباح والمساء**
 
-</div>
-
----
+برنامج بسيط وجميل يساعدك على المحافظة على الأذكار اليومية بطريقة سهلة ومريحة
 
 <div align="center">
 
-A beautiful and elegant desktop widget for **Islamic morning and evening Athkar** (remembrances). Stay connected with your daily spiritual practices through a clean, unobtrusive interface that sits on your desktop.
-
-[Download Latest Release](../../releases/latest) • [Report Bug](../../issues) • [Request Feature](../../issues)
+[![تحميل التطبيق](https://img.shields.io/badge/تحميل_التطبيق-4CAF50?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
+[![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
 
 </div>
 
 ---
 
-## ✨ Features
+## 📸 لقطات من البرنامج
 
-<table>
-<tr>
-<td width="50%">
-
-### 🎨 **Interface**
-- ✅ Clean Arabic RTL interface
-- ✅ Modern minimalist design
-- ✅ Always-on-top widget
-- ✅ Draggable window
-- ✅ Compact & unobtrusive
-
-</td>
-<td width="50%">
-
-### 🌓 **Themes**
-- ✅ Light mode (default)
-- ✅ Dark mode support
-- ✅ Smooth theme transitions
-- ✅ Persistent preferences
-- ✅ Eye-friendly colors
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 📿 **Athkar Content**
-- ✅ آية الكرسي (Ayat al-Kursi)
-- ✅ سورة الإخلاص، الفلق، الناس
-- ✅ Morning supplications (صباح)
-- ✅ Evening supplications (مساء)
-- ✅ Authentic hadiths & benefits
-
-</td>
-<td width="50%">
-
-### ⚙️ **Functionality**
-- ✅ System tray integration
-- ✅ Progress tracking
-- ✅ Audio feedback (optional)
-- ✅ Customizable font sizes
-- ✅ Remembers position
-
-</td>
-</tr>
-</table>
+![لقطات الشاشة](screenshots.png)
 
 ---
 
-## 📥 Installation
+## ✨ المميزات
 
-### 💻 **Windows Installer**
-
-1. **Download** the latest installer from [Releases](../../releases/latest)
-2. **Run** `أذكار المسلم Setup 1.0.0.exe`
-3. **Follow** the installation wizard
-4. **Launch** from desktop shortcut or start menu
-
-> 📌 **Note:** No administrator rights required • User installation • ~73 MB download
-
-### 🛠️ **Build from Source**
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/athkar-desktop.git
-cd athkar-desktop
-
-# Install dependencies
-npm install
-
-# Run in development
-npm start
-
-# Build Windows installer
-npm run dist
-```
-
-**Requirements:** Node.js 16+ • npm 7+ • Windows 10/11
+- 📿 **أذكار صحيحة** - جميع الأذكار من مصادر موثوقة
+- 🌓 **وضع ليلي ونهاري** - راحة للعين في جميع الأوقات
+- 📊 **متابعة التقدم** - تتبع عدد مرات قراءة كل ذكر
+- 🔊 **صوت اختياري** - تفعيل صوت عند النقر
+- ⚙️ **إعدادات مرنة** - تخصيص حجم الخط والإعدادات
+- 💻 **خفيف وسريع** - يعمل في الخلفية دون استهلاك موارد
+- 🎯 **سهل الاستخدام** - واجهة بسيطة وواضحة
 
 ---
 
-## 🎯 Usage Guide
+## 📥 التحميل والتثبيت
 
-### **Main Window**
+### تحميل مباشر
 
-| Button | Function |
-|--------|----------|
-| **صباح** | Switch to morning Athkar |
-| **مساء** | Switch to evening Athkar |
-| **تسبيح** | Count current dhikr |
-| **← →** | Navigate between Athkar |
-| **⚙️** | Open settings |
-| **✕** | Hide to system tray |
+<div align="center">
 
-### **System Tray Menu**
+**[⬇️ تحميل أحدث إصدار](../../releases/latest)**
 
-Right-click the tray icon for quick actions:
-- **إظهار** - Show window
-- **إخفاء** - Hide window  
-- **الإعدادات** - Open settings
-- **خروج** - Quit application
+</div>
 
-💡 **Tip:** Double-click tray icon to quickly toggle window visibility
+1. قم بتحميل ملف التثبيت من صفحة الإصدارات
+2. قم بتشغيل الملف المحمل
+3. اتبع خطوات التثبيت
+4. افتح البرنامج من سطح المكتب
 
-### **Settings Panel**
-
-- **حجم الخط** - Adjust Arabic text size (14-28px)
-- **تفعيل الصوت** - Enable/disable click sounds
-- **الوضع الداكن** - Toggle dark/light theme
-- **إعادة التعيين** - Reset all progress data
+> حجم التحميل: حوالي 73 ميجابايت
 
 ---
 
-## 📖 Athkar Content
+## 📖 الأذكار المتضمنة
 
-All content is sourced from **authentic Islamic texts**:
+### أذكار الصباح (24 ذكر)
 
-### Morning Athkar (أذكار الصباح)
-24 supplications including:
-- Ayat al-Kursi with benefits
-- The three protective Suras (3× each)
-- Major morning du'as from Sunnah
-- Tasbih variations (10×, 100×)
-- Istighfar and Salawat
+1. آية الكرسي (مرة واحدة)
+2. "أصبحنا على فطرة الإسلام..." (مرة واحدة)
+3. "رضيت بالله ربا..." (مرة واحدة)
+4. "اللهم إني أسألك علما نافعا..." (مرة واحدة)
+5. "اللهم بك أصبحنا..." (مرة واحدة)
+6. "لا إله إلا الله وحده..." (10 مرات)
+7. "يا حي يا قيوم..." (مرة واحدة)
+8. سيد الاستغفار (مرة واحدة)
+9. "اللهم فاطر السموات..." (مرة واحدة)
+10. "أصبحنا وأصبح الملك لله..." (مرة واحدة)
+11. "اللهم إني أسألك العافية..." (مرة واحدة)
+12. "بسم الله الذي لا يضر..." (3 مرات)
+13. "سبحان الله وبحمده عدد خلقه..." (3 مرات)
+14. "اللهم عافني في بدني..." (3 مرات)
+15. سورة الإخلاص (3 مرات)
+16. سورة الفلق (3 مرات)
+17. سورة الناس (3 مرات)
+18. "حسبي الله لا إله إلا هو..." (7 مرات)
+19. "اللهم إني أصبحت أشهدك..." (4 مرات)
+20. "اللهم ما أصبح بي من نعمة..." (مرة واحدة)
+21. "سبحان الله وبحمده" (100 مرة)
+22. "أستغفر الله وأتوب إليه" (100 مرة)
+23. "لا إله إلا الله وحده..." (100 مرة)
+24. التسبيح الجامع (مرة واحدة)
 
-### Evening Athkar (أذكار المساء)
-24 supplications including:
-- Ayat al-Kursi with benefits
-- The three protective Suras (3× each)
-- Major evening du'as from Sunnah
-- Tasbih variations (10×, 100×)
-- Special evening protection du'as
+### أذكار المساء (24 ذكر)
 
----
-
-## 🏗️ Technical Stack
-
-**Built with modern web technologies:**
-
-- **Framework:** Electron 28.x
-- **Languages:** JavaScript (ES6+), HTML5, CSS3
-- **Typography:** Amiri Arabic Font
-- **Icons:** Feather Icons
-- **Build Tool:** electron-builder
-- **Installer:** NSIS (Windows)
-
-### **Project Structure**
-
-```
-athkar-desktop/
-├── 📄 main.js                  # Electron main process + tray
-├── 📄 renderer.js              # Main window logic
-├── 📄 settings-renderer.js     # Settings window logic
-├── 📄 index.html               # Main UI
-├── 📄 settings.html            # Settings UI
-├── 🎨 styles.css               # Main styles
-├── 🎨 settings-styles.css      # Settings styles
-├── 📚 athkar-data.json         # All Athkar content
-├── ⚙️ user-settings.json       # Auto-generated preferences
-└── 📁 assets/
-    └── icon.png                # Application icon
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are **warmly welcomed**! Here's how you can help:
-
-1. 🍴 **Fork** the repository
-2. 🌿 **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. 💾 **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. 📤 **Push** to the branch (`git push origin feature/amazing-feature`)
-5. 🎉 **Open** a Pull Request
-
-### **Areas for Contribution**
-- 🌍 Additional language support
-- 📱 macOS/Linux versions
-- 🎨 UI/UX improvements
-- 📖 More authentic Athkar content
-- 🐛 Bug fixes
+1. آية الكرسي (مرة واحدة)
+2. "أمسينا على فطرة الإسلام..." (مرة واحدة)
+3. "رضيت بالله ربا..." (مرة واحدة)
+4. "اللهم بك أمسينا..." (مرة واحدة)
+5. "لا إله إلا الله وحده..." (10 مرات)
+6. "يا حي يا قيوم..." (مرة واحدة)
+7. سيد الاستغفار (مرة واحدة)
+8. "اللهم فاطر السموات..." (مرة واحدة)
+9. "أمسينا وأمسى الملك لله..." (مرة واحدة)
+10. "اللهم إني أسألك العافية..." (مرة واحدة)
+11. "بسم الله الذي لا يضر..." (3 مرات)
+12. "سبحان الله وبحمده عدد خلقه..." (3 مرات)
+13. "اللهم عافني في بدني..." (3 مرات)
+14. سورة الإخلاص (3 مرات)
+15. سورة الفلق (3 مرات)
+16. سورة الناس (3 مرات)
+17. "حسبي الله لا إله إلا هو..." (7 مرات)
+18. "اللهم إني أمسيت أشهدك..." (4 مرات)
+19. "اللهم ما أمسى بي من نعمة..." (مرة واحدة)
+20. "سبحان الله وبحمده" (100 مرة)
+21. "أستغفر الله وأتوب إليه" (100 مرة)
+22. "لا إله إلا الله وحده..." (100 مرة)
+23. التسبيح الجامع (مرة واحدة)
+24. "أعوذ بكلمات الله التامات..." (3 مرات)
 
 ---
 
-## 📜 License
+## 🎮 طريقة الاستخدام
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+### الأزرار الرئيسية
 
-**You are free to:**
-- ✅ Use commercially
-- ✅ Modify and distribute
-- ✅ Use privately
-- ✅ Sublicense
+- **صباح** - عرض أذكار الصباح
+- **مساء** - عرض أذكار المساء
+- **تسبيح** - عد الذكر الحالي
+- **→ ←** - التنقل بين الأذكار
+- **⚙️** - فتح الإعدادات
+- **✕** - إخفاء النافذة إلى شريط المهام
+
+### قائمة شريط المهام
+
+انقر بزر الماوس الأيمن على أيقونة البرنامج:
+- **إظهار** - إظهار النافذة
+- **إخفاء** - إخفاء النافذة
+- **الإعدادات** - فتح الإعدادات
+- **خروج** - إغلاق البرنامج
+
+### الإعدادات
+
+- **حجم الخط** - تغيير حجم الخط (14-28)
+- **تفعيل الصوت** - تفعيل صوت عند النقر
+- **الوضع الداكن** - تفعيل الوضع الليلي
+- **إعادة التعيين** - مسح جميع البيانات المحفوظة
 
 ---
 
-## 🙏 Credits & Acknowledgments
+## 💻 التقنيات المستخدمة
 
-- **Feather Icons** - Beautiful UI icons
-- **Google Fonts** - Amiri Arabic typography
-- **Islamic Content** - Authentic sources from Sunnah
-- **Electron Community** - Amazing framework and tools
+- **Electron** - إطار العمل لتطبيقات سطح المكتب
+- **JavaScript** - لغة البرمجة
+- **HTML/CSS** - واجهة المستخدم
+- **خط أميري** - خط عربي جميل
 
 ---
 
-## 📞 Support
-
-<div dir="rtl">
+## 📞 الدعم والتواصل
 
 ### للدعم والمساعدة
 
-- 🐛 **عند وجود مشكلة:** [افتح Issue](../../issues/new)
-- 💡 **لاقتراح ميزة:** [ميزة جديدة](../../issues/new)
-- 📧 **للتواصل المباشر:** [البريد الإلكتروني](mailto:your@email.com)
+- 📧 **للتواصل المباشر:** [ahmed6093@gmail.com](mailto:ahmed6093@gmail.com)
+- 🐛 **للإبلاغ عن مشكلة:** [افتح Issue](../../issues/new)
+- 💡 **لاقتراح ميزة جديدة:** [اقترح ميزة](../../issues/new)
 
-جزاكم الله خيراً على دعمكم
+---
 
-</div>
+## 📜 الترخيص
 
-**Found a bug?** [Report it here](../../issues/new)  
-**Have a suggestion?** [Share your idea](../../issues/new)  
-**Need help?** [Check existing issues](../../issues)
+هذا المشروع مرخص تحت رخصة MIT - يمكنك استخدامه وتعديله بحرية
 
 ---
 
 <div align="center">
 
-**May Allah accept this work and make it beneficial for all Muslims** 🤲
+**جعل الله هذا العمل في ميزان حسناتنا وحسناتكم** 🤲
 
-⭐ **If this project helps you, consider giving it a star!** ⭐
+**نسأل الله القبول والإخلاص**
 
-Made with ❤️ for the Muslim Ummah
+⭐ **إذا أعجبك البرنامج، لا تنسى إضافة نجمة للمشروع** ⭐
+
+</div>
 
 </div>
