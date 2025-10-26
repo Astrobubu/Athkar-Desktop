@@ -11,7 +11,7 @@
 <div align="center">
 
 <a href="../../releases/latest">
-  <img src="download-button.png" alt="تنزيل التطبيق" style="max-width: 40%;">
+  <img src="download-button.png" alt="تنزيل التطبيق" width="300">
 </a>
 
 </div>
