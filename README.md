@@ -10,9 +10,7 @@
 
 <div align="center">
 
-[![Download](https://img.shields.io/badge/Download-تحميل-4CAF50?style=for-the-badge&logo=download&logoColor=white)](../../releases/latest)
-[![Windows](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](../../releases/latest)
-[![Latest Release](https://img.shields.io/github/v/release/Astrobubu/Athkar-Desktop?style=for-the-badge&label=Version&color=blue)](../../releases/latest)
+[![تنزيل التطبيق](download-button.png)](../../releases/latest)
 
 </div>
 
@@ -38,16 +36,8 @@
 
 ## 📥 التحميل والتثبيت
 
-### تحميل مباشر
-
-<div align="center">
-
-**[⬇️ تحميل أحدث إصدار](../../releases/latest)**
-
-</div>
-
-1. قم بتحميل ملف التثبيت من صفحة الإصدارات
-2. قم بتشغيل الملف المحمل
+1. اضغط على زر التنزيل أعلاه
+2. قم بتشغيل ملف التثبيت المحمل
 3. اتبع خطوات التثبيت
 4. افتح البرنامج من سطح المكتب
 
