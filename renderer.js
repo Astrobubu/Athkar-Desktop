@@ -87,7 +87,14 @@ function incrementCounter() {
 
         // Play sound effect (if enabled)
         if (state.settings.playSound) {
-            playTickSound();
+            // Check if this is the last count for this dhikr
+            if (state.currentCount >= athkar.count) {
+                // Play completion sound when moving to next dhikr
+                playCompletionSound();
+            } else {
+                // Play regular tick sound for repeated dhikr
+                playTickSound();
+            }
         }
 
         // Auto-advance when completed
@@ -148,7 +155,7 @@ function showCompletionMessage() {
     if (countBtn) countBtn.style.display = 'none';
 }
 
-// Play tick sound (simple beep using Web Audio API)
+// Play tick sound for repeated dhikr (simple beep using Web Audio API)
 function playTickSound() {
     try {
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -161,11 +168,37 @@ function playTickSound() {
         oscillator.frequency.value = 800;
         oscillator.type = 'sine';
 
-        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+        // Lower volume from 0.3 to 0.15
+        gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
         gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
 
         oscillator.start(audioContext.currentTime);
         oscillator.stop(audioContext.currentTime + 0.1);
+    } catch (error) {
+        console.error('Error playing sound:', error);
+    }
+}
+
+// Play completion sound for moving to next dhikr (different tone)
+function playCompletionSound() {
+    try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+
+        // Higher frequency for completion sound
+        oscillator.frequency.value = 1200;
+        oscillator.type = 'sine';
+
+        // Lower volume
+        gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
+
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.15);
     } catch (error) {
         console.error('Error playing sound:', error);
     }
