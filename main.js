@@ -128,8 +128,10 @@ function loadSavedSettings() {
 }
 
 function createTray() {
-  // Use the app icon for the tray
-  const iconPath = path.join(__dirname, 'logo.ico');
+  // Use the app icon for the tray (platform-specific format)
+  const iconPath = process.platform === 'darwin'
+    ? path.join(__dirname, 'logo.png')
+    : path.join(__dirname, 'logo.ico');
   tray = new Tray(iconPath);
   
   const contextMenu = Menu.buildFromTemplate([

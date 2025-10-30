@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder",
-    "dist": "electron-builder --win"
+    "dist": "electron-builder --win",
+    "dist:mac": "electron-builder --mac"
   },
   "keywords": [
     "athkar",
@@ -19,7 +20,7 @@
   "author": "Athkar Desktop Team",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^28.0.0",
+    "electron": "^25.9.0",
     "electron-builder": "^24.9.1",
     "png-to-ico": "3.0.1"
   },
@@ -63,6 +64,23 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "أذكار المسلم"
+    },
+    "mac": {
+      "icon": "logo.png",
+      "category": "public.app-category.lifestyle",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "identity": null,
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
+        }
+      ]
     }
   }
 }
