@@ -1,0 +1,66 @@
+name: 'Release'
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g., 2.0.0)'
+        required: true
+        type: string
+
+jobs:
+  build-tauri:
+    permissions:
+      contents: write
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install Rust stable
+        uses: dtolnay/rust-action@stable
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Get version
+        id: get-version
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build Tauri
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        with:
+          tagName: v${{ steps.get-version.outputs.version }}
+          releaseName: 'أذكار المسلم v${{ steps.get-version.outputs.version }}'
+          releaseBody: |
+            ## أذكار المسلم - Tauri Edition v${{ steps.get-version.outputs.version }}
+
+            ### التغييرات في هذا الإصدار:
+            - 🚀 تم إعادة بناء التطبيق باستخدام Tauri (أصغر حجماً وأسرع)
+            - ⚡ تحسين الأداء وتقليل استهلاك الذاكرة
+            - 🔄 دعم التحديث التلقائي
+
+            ### التحميل:
+            قم بتحميل الملف أدناه وتثبيته.
+          releaseDraft: false
+          prerelease: false
+          includeUpdaterJson: true
+          updaterJsonKeepUniversal: true

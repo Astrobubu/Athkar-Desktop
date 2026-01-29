@@ -1,23 +1,40 @@
 # Dependencies
-node_modules/
-package-lock.json
+node_modules
 
-# Build outputs
-dist/
-*.log
+# Build output
+dist
+build
 
-# User data
-user-settings.json
+# Tauri
+src-tauri/target
+src-tauri/gen
+src-tauri/Cargo.lock
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 
 # IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+.vscode
+.idea
+*.iml
 
-# Electron
-*.cache
+# Logs
+npm-debug.log*
+
+# Local settings (but keep example)
+user-settings.json
+!user-settings.example.json
+
+# Temporary files
+*.tmp
+*.temp
+
+# MCP configuration (sensitive)
+mcp.json
+
+# Tauri signing keys (NEVER commit these!)
+*.key
+tauri-key.key
+tauri-signing-key.key
+generate-keys.ps1
