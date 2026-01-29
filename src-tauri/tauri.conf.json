@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "أذكار المسلم",
+  "version": "2.0.0",
+  "identifier": "com.athkar.desktop",
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "frontendDist": "../public"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "الأذكار",
+        "width": 320,
+        "height": 720,
+        "minWidth": 320,
+        "minHeight": 400,
+        "maxWidth": 320,
+        "maxHeight": 900,
+        "resizable": false,
+        "fullscreen": false,
+        "decorations": false,
+        "transparent": false,
+        "alwaysOnTop": false,
+        "skipTaskbar": false,
+        "center": true,
+        "visible": true,
+        "focus": true,
+        "backgroundColor": "#F5F3EF"
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "withGlobalTauri": true
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "resources": [
+      "athkar-data.json"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://github.com/Astrobubu/Athkar-Desktop/releases/latest/download/latest.json"
+      ],
+      "pubkey": ""
+    }
+  }
+}
