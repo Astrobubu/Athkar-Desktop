@@ -1,6 +1,6 @@
 [package]
 name = "athkar-desktop"
-version = "2.0.1"
+version = "2.0.2"
 description = "أذكار المسلم - Beautiful Islamic Athkar Desktop Widget"
 authors = ["Athkar Desktop Team"]
 license = "MIT"

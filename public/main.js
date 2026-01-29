@@ -526,21 +526,40 @@ document.addEventListener('keydown', (e) => {
 async function checkForUpdates(manual = false) {
     const statusEl = document.getElementById('updateStatus');
     const checkBtn = document.getElementById('checkUpdateBtn');
-    
+
     if (manual) {
         statusEl.style.display = 'block';
         statusEl.textContent = 'جاري التحقق...';
         checkBtn.disabled = true;
     }
-    
+
     try {
         const update = await invoke('check_for_update');
-        
+
         if (update) {
-            // Show update notification
-            document.getElementById('updateText').textContent = `تحديث جديد متاح: ${update.version}`;
-            document.getElementById('updateNotification').style.display = 'flex';
-            
+            // Check if this version was already dismissed
+            const dismissedVersion = localStorage.getItem('dismissedUpdateVersion');
+            const dismissCount = parseInt(localStorage.getItem('updateDismissCount') || '0');
+
+            // Only show notification if: manual check, OR (not dismissed this version AND shown less than 2 times)
+            const shouldShow = manual || (dismissedVersion !== update.version && dismissCount < 2);
+
+            if (shouldShow) {
+                document.getElementById('updateText').textContent = `تحديث جديد متاح: ${update.version}`;
+                document.getElementById('updateNotification').style.display = 'flex';
+
+                // Track show count for this version
+                if (!manual) {
+                    const currentVersion = localStorage.getItem('lastShownUpdateVersion');
+                    if (currentVersion === update.version) {
+                        localStorage.setItem('updateDismissCount', (dismissCount + 1).toString());
+                    } else {
+                        localStorage.setItem('lastShownUpdateVersion', update.version);
+                        localStorage.setItem('updateDismissCount', '1');
+                    }
+                }
+            }
+
             if (manual) {
                 statusEl.innerHTML = `<span style="color: #2D5F5D;">تحديث جديد متاح: ${update.version}</span>`;
             }
@@ -555,7 +574,7 @@ async function checkForUpdates(manual = false) {
             statusEl.innerHTML = '<span style="color: #C74B50;">فشل التحقق من التحديثات</span>';
         }
     }
-    
+
     if (manual) {
         checkBtn.disabled = false;
         setTimeout(() => { statusEl.style.display = 'none'; }, 3000);
@@ -574,7 +593,12 @@ async function installUpdate() {
 
 function dismissUpdate() {
     document.getElementById('updateNotification').style.display = 'none';
-    localStorage.setItem('updateDismissed', Date.now().toString());
+    // Store the dismissed version so we don't show it again
+    const updateText = document.getElementById('updateText').textContent;
+    const versionMatch = updateText.match(/(\d+\.\d+\.\d+)/);
+    if (versionMatch) {
+        localStorage.setItem('dismissedUpdateVersion', versionMatch[1]);
+    }
 }
 
 // Init
@@ -591,16 +615,12 @@ async function init() {
     
     // Check for updates on startup (once per day)
     const lastCheck = localStorage.getItem('lastUpdateCheck');
-    const lastDismissed = localStorage.getItem('updateDismissed');
     const now = Date.now();
     const dayMs = 24 * 60 * 60 * 1000;
-    
+
     if (!lastCheck || (now - parseInt(lastCheck)) > dayMs) {
         localStorage.setItem('lastUpdateCheck', now.toString());
-        // Only check if not dismissed in last 24 hours
-        if (!lastDismissed || (now - parseInt(lastDismissed)) > dayMs) {
-            checkForUpdates(false);
-        }
+        checkForUpdates(false);
     }
 }
 
