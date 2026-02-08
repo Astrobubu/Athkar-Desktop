@@ -250,16 +250,16 @@ pub fn run() {
             });
 
             // Setup tray icon
-            #[cfg(all(desktop, not(debug_assertions)))]
+            #[cfg(desktop)]
             {
                 use tauri::tray::{TrayIconBuilder, TrayIconEvent};
                 use tauri::menu::{MenuBuilder, MenuItemBuilder};
-                
+
                 let show_i = MenuItemBuilder::new("إظهار").id("show").build(app)?;
                 let hide_i = MenuItemBuilder::new("إخفاء").id("hide").build(app)?;
                 let settings_i = MenuItemBuilder::new("الإعدادات").id("settings").build(app)?;
                 let quit_i = MenuItemBuilder::new("خروج").id("quit").build(app)?;
-                
+
                 let menu = MenuBuilder::new(app)
                     .item(&show_i)
                     .item(&hide_i)
@@ -268,8 +268,10 @@ pub fn run() {
                     .separator()
                     .item(&quit_i)
                     .build()?;
-                
+
                 let _tray = TrayIconBuilder::new()
+                    .icon(app.default_window_icon().unwrap().clone())
+                    .tooltip("أذكار المسلم")
                     .menu(&menu)
                     .show_menu_on_left_click(false)
                     .on_menu_event(|app, event| match event.id.as_ref() {

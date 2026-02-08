@@ -76,9 +76,17 @@ function saveCustomAthkar() {
     }
 }
 
+// Determine morning or evening based on time of day
+// Morning athkar: from Fajr (~4 AM) until Asr (~3:30 PM)
+// Evening athkar: from Asr (~3:30 PM) until Fajr (~4 AM)
+function getTimeBasedCategory() {
+    const hour = new Date().getHours();
+    return (hour >= 4 && hour < 16) ? 'morning' : 'evening';
+}
+
 // State
 let state = {
-    currentCategory: 'morning',
+    currentCategory: getTimeBasedCategory(),
     currentAthkarIndex: 0,
     currentCount: 0,
     settings: {
@@ -107,7 +115,7 @@ function showView(viewName) {
         invoke('resize_window', { height: 720 });
     } else if (viewName === 'settings') {
         loadSettingsToUI();
-        invoke('resize_window', { height: 600 });
+        invoke('resize_window', { height: 720 });
     }
 }
 
@@ -607,8 +615,13 @@ async function init() {
     loadProgress();
     loadSettings();
     setupEventListeners();
+
+    // Set the correct active tab based on current category (time-based or loaded from progress)
+    document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`[data-category="${state.currentCategory}"]`).classList.add('active');
+
     updateDisplay();
-    
+
     document.getElementById('dragHandle').setAttribute('data-tauri-drag-region', '');
     
     setTimeout(calculateOptimalHeight, 100);
